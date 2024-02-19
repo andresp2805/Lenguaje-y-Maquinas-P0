@@ -37,8 +37,6 @@ def obtener_lista_tokens(contenido):
 
 def crear_tokens(lista_tokens):
     lista = []
-    lista2 = []
-    lista3 = []
     for i in range(0,len(lista_tokens)):
         if lista_tokens[i] == '(':
             lista.append(('LPAREN' , '('))
