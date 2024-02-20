@@ -53,7 +53,7 @@ def crear_tokens(lista_tokens):
         elif lista_tokens[i] in D:
             lista.append(('INPUT' , lista_tokens[i]))
         elif is_a_number(lista_tokens[i]) == int:
-            lista.append(('INT: ' , lista_tokens[i]))
+            lista.append(('INT' , lista_tokens[i]))
         elif is_a_number(lista_tokens[i]) == float:
             lista.append(('FLOAT' , lista_tokens[i]))
         else:
@@ -70,9 +70,3 @@ def is_a_number(s):
             return float
         except ValueError:
             return str
-        
-content = leer_archivo('texto.txt')
-arreglo = procesar_codigo(content)
-result = obtener_lista_tokens(arreglo)
-tokens = crear_tokens(result)
-print(tokens)
